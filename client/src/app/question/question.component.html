@@ -1,0 +1,11 @@
+<p class="question">what is the type of the word "{{ question.word }}" ? </p>
+<div>
+  <button [disabled]="!!message" (click)="onAnswer('noun')">noun</button>
+  <button [disabled]="!!message" (click)="onAnswer('verb')">verb</button>
+  <button [disabled]="!!message" (click)="onAnswer('adjective')">adjective</button>
+  <button [disabled]="!!message" (click)="onAnswer('adverb')">adverb</button>
+</div>
+
+<app-message *ngIf="!!message" [message]="message"></app-message>
+<button *ngIf="!!message" class="btn-next" [disabled]="!message" (click)="onNext()">next</button>
+

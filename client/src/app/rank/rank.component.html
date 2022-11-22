@@ -1,0 +1,10 @@
+<div class="rank">
+  <img class="cup" src="assets/img/cup.svg" alt="cup">
+  <h1 class="rank__text">
+    you finished the quiz with a rank of {{rank | number:"2.2-2"}}.
+  </h1>
+
+  <div class="rank__buttons">
+    <button *ngIf="rank < 100" class="btn btn--primary" (click)="onPlayAgain()">play again</button>
+  </div>
+</div>

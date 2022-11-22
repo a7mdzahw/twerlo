@@ -1,0 +1,13 @@
+<div>
+  <nav>
+    <h1>Questions</h1>
+
+  </nav>
+  <app-progress [progress]="progress"></app-progress>
+  <div *ngIf="progress !== 100">
+    <app-question [question]="question" (chooseAnswer)="onAnswer($event)" (next)="next()"></app-question>
+  </div>
+  <div *ngIf="progress === 100">
+    <app-rank [score]="score"></app-rank>
+  </div>
+</div>

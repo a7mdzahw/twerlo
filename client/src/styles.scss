@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #333;
+  margin: 20px;
+}
+button {
+  margin: 10px;
+  color: white;
+  text-transform: capitalize;
+  background-color: #353;
+  font-size: large;
+   outline: none;
+   padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+  &:hover {
+    background-color: lighten($color: #353, $amount: 20);
+  }
+  &:disabled {
+    background-color: #ccc;
+  }
+}
+
+progress {
+
+  width: 100%;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 6px;
+  margin: 10px 0;
+  &::-webkit-progress-bar {
+    background-color: #ccc;
+    border-radius: 4px;
+  }
+  &::-webkit-progress-value {
+    background-color: #0f0;
+  }
+}
+
+
+nav {
+  background-color: #333;
+  color: white;
+  display: flex;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
