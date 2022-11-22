@@ -3,17 +3,17 @@ import { Injectable } from '@angular/core';
 import { Word } from './word';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class QuestionService {
-
-  constructor(private httpClient:HttpClient) { }
+  url = 'http://localhost:42598/';
+  constructor(private httpClient: HttpClient) {}
 
   getWords() {
-    return this.httpClient.get<Word[]>('http://localhost:4555/wordlist');
+    return this.httpClient.get<Word[]>(this.url + 'wordlist');
   }
 
   getRank(score: number) {
-    return this.httpClient.post<number>(`http://localhost:4555/rank`, { score });
+    return this.httpClient.post<number>(this.url + `rank`, { score });
   }
 }
