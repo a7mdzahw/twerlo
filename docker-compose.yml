@@ -8,7 +8,5 @@ services:
     build: ./client
     ports: 
       - 42150:80
-    environment:
-      - url=http://server:42598
     depends_on: 
       - server     

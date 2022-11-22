@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { Word } from './word';
 
 @Injectable({
@@ -7,7 +8,7 @@ import { Word } from './word';
 })
 export class QuestionService {
   // api url for the server to fetch data
-  url = 'http://localhost:3000/';
+  url = environment.apiUrl;
 
   // inject HttpClient service
   constructor(private httpClient: HttpClient) {}
