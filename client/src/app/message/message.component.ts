@@ -7,9 +7,4 @@ import { Component, Input } from '@angular/core';
 })
 export class MessageComponent {
    @Input() message: string = '';
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }
